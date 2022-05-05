@@ -1,0 +1,14 @@
+out/
+target/
+bin/
+*.log
+*.txt
+*.tmp
+.idea/
+*.lock
+*.iml
+build/
+dist/
+out/
+!spec/*.log
+/dist

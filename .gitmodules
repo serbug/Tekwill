@@ -1,0 +1,6 @@
+[submodule "Lesson"]
+	path = Lesson
+	url = https://github.com/UmanetAlexandru/Tekwill2022.git
+[submodule "Tekwill2022"]
+	path = Tekwill2022
+	url = https://github.com/UmanetAlexandru/Tekwill2022.git

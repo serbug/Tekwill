@@ -1,0 +1,10 @@
+ECHO attivo.
+build/
+dist/
+out/
+.idea/
+*.log
+!spec/*.log
+*.iml
+
+/dist
