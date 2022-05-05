@@ -1,7 +1,12 @@
 package com.serbug;
 
 import java.util.Scanner;
-
+/*
+   # Tekwill Academy
+   # Java Fundamentals
+   # Exercise 5.2 The army of units
+   # Author: Sergiu
+*/
 public class Main {
 
     public static void main(String[] args) {
