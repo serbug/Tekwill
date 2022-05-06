@@ -7,7 +7,7 @@
 
 > #### Exercises !!!
 >
->- **[Lesson Teacher Version](https://github.com/UmanetAlexandru/Tekwill2022)**
+>- **[Lesson](https://github.com/UmanetAlexandru/Tekwill2022)**
 >
 >- **[Lesson 1](Lesson_1)**
 >
@@ -17,7 +17,6 @@
 > 
 >- **[Lesson 4](Lesson_4)**
 >
->- **[Lesson 5](Lesson_5)**
 >
 
 ## Installation
