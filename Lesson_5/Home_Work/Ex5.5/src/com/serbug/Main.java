@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
    # Tekwill Academy
    # Java Fundamentals
-   # Exercise 5.4 Harry Potter
+   # Exercise 5.5 Floor-space of the room
    # Author: Sergiu
 */
 public class Main {
