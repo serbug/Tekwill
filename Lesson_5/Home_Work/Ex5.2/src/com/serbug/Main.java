@@ -34,29 +34,30 @@ public class Main {
             if (number < 1) {
 
                 text = "\n\t\t\t no army";
-                System.out.println(text.toUpperCase());
+
 
             } else if (number <= 19) {
 
                 text = "\n\t\t\t pack";
-                System.out.println(text.toUpperCase());
+
 
             } else if (number <= 249) {
 
                 text = "\n\t\t\t throng";
-                System.out.println(text.toUpperCase());
+
 
             } else if (number <= 999) {
 
                 text = "\n\t\t\t zounds";
-                System.out.println(text.toUpperCase());
+
 
             } else {
 
                 text = "\n\t\t\t legion";
-                System.out.println(text.toUpperCase());
+
             }
 
+            System.out.println(text.toUpperCase());
 
             //Simple validation for user input if what repeat exercises
             System.out.println("\n Do you want repeat ? Y / N ");
