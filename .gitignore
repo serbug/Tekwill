@@ -8,6 +8,7 @@ bin/
 *.lock
 *.iml
 build/
+img/
 dist/
 out/
 !spec/*.log
