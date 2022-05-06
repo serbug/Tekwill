@@ -9,7 +9,7 @@
 _________________________________________________________________________________________________
 ![Java Fundamentals](img/java.jpg)
 
-####Java Fundamentals is a 90-hour training course from scratch. It is guided by a mentor and is intended for all those who do not have programming knowledge.
+#### Java Fundamentals is a 90-hour training course from scratch. It is guided by a mentor and is intended for all those who do not have programming knowledge.
 _________________________________________________________________________________________________
 
 ## Exercises 📌
