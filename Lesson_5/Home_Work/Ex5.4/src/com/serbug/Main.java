@@ -36,26 +36,28 @@ public class Main {
             switch (option) {
                 case "gryffindor" -> {
                     text = "\n\t\t\tbravery";
-                    System.out.println(text.toUpperCase());
+                   
                 }
                 case "hufflepuff" -> {
                     text = "\n\t\t\tloyalty";
-                    System.out.println(text.toUpperCase());
+
                 }
                 case "slytherin" -> {
                     text = "\n\t\t\tcunning";
-                    System.out.println(text.toUpperCase());
+
                 }
                 case "\n\t\t\travenclaw" -> {
                     text = "intellect";
-                    System.out.println(text.toUpperCase());
+
                 }
                 default -> {
                     text = "\n\t\t\tnot a valid house";
-                    System.out.println(text.toUpperCase());
+
                 }
 
             }
+            System.out.println(text.toUpperCase());
+
             //Simple validation for user input if what repeat exercises
             System.out.println("\n Do you want repeat ? Y / N ");
             var = sc.next().toUpperCase(); // ALL input converted to UpperCase
