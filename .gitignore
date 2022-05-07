@@ -1,9 +1,0 @@
-out/
-target/
-bin/
-*.log
-*.txt
-*.tmp
-.idea/
-*.lock
-*.iml
