@@ -5,30 +5,45 @@ import java.util.Scanner;
 /*
    # Tekwill Academy
    # Java Fundamentals
-   # Exercise 5.3 The sum of integers from a to b
+   # Exercise 5.3 Shape 
    # Author: Sergiu
 */
 public class Main {
 
     public static void main(String[] args) {
-	/*Condition: Print the sum of all integers from a to b including both. Integer a is always lower the b(a<b). */
+       
+    /* Condition: Write a program, which reads the number of the shape (1 - square, 2 - circle, 3 - triangle, 4 - rhombus) 
+        and prints the text "You have chosen a square" (or circle, or triangle, or rhombus, depending on the number).
+        
+        If it is a number that doesn't correspond to any of the listed shapes, the program should output: "There is no such shape!".
+        
+    */
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\n Insert a number for variable A:");
-        int a = sc.nextInt();
-        System.out.println("\n Insert a number for variable B:");
-        int b= sc.nextInt();
+        String option = "Y";// variable for while loop
 
-        int sum=0; //sum of all integers
+        //Simple loop for repeat exercises.
+        while (option.equals("Y")) {
 
-        int i=a;
-        while (i<=b){
-            sum+=i;
-            i++; //increment
+            System.out.println("\n Insert the number of the shape: ");
+            int number = sc.nextInt();
+
+            String text = "\n You have chosen a ";
+
+            switch (number) {
+                case 1 -> System.out.println(text + "square!".toUpperCase());
+                case 2 -> System.out.println(text + "circle!".toUpperCase());
+                case 3 -> System.out.println(text + "triangle!".toUpperCase());
+                case 4 -> System.out.println(text + "rhombus!".toUpperCase());
+                default -> System.out.println("There is no such shape!");
+            }
+
+            //Simple validation for user input if what repeat exercises
+            System.out.println("\n Do you want repeat ? Y / N ");
+            option = sc.next().toUpperCase(); // ALL input converted to UpperCase
         }
 
-        System.out.println("\n The sum of all integers from "+a+ " to "+b+" is \033[0;4m"+sum+"\033[0m.");
 
     }
 }
