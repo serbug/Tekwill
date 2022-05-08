@@ -2,16 +2,16 @@ package com.serbug;
 
 import java.util.Scanner;
 
-/*
-   # Tekwill Academy
-   # Java Fundamentals
-   # Exercise 5.5 Floor-space of the room
-   # Author: Sergiu
+/**
+    Tekwill Academy
+    Java Fundamentals
+    Exercise 5.5 Floor-space of the room
+    @Author Sergiu
 */
 public class Main {
 
     public static void main(String[] args) {
-	/* Condition: Residents of the country of Malevia often experiment with the plan of their rooms.
+	/** Condition: Residents of the country of Malevia often experiment with the plan of their rooms.
         Rooms can be triangular, rectangular, and round. Write a program that calculates the
         floorage of the rooms.
            Input data format: The type of the room shape and the relevant parameters.
