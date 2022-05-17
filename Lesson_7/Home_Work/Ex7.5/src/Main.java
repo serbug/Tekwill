@@ -22,15 +22,17 @@ public class Main {
         System.out.print("\n String: ");
         String str = sc.nextLine();
         System.out.print("\n Substring: ");
-        String subs=sc.nextLine();
+        String subs = sc.nextLine();
 
-        int count=0;
+        int count = 0;
+        String[] s = str.split(" ", 5);
 
-            if(str.contains(subs)){
+        for (String temp : s) {
+            //System.out.print(temp);
+            if (temp.contains(subs)) {
                 count++;
             }
-
-
-        System.out.println(count);
+        }
+        System.out.println("\n\t\t\t Count: " + count);
     }
 }

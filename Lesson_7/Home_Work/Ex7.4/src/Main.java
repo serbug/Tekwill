@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -20,15 +19,28 @@ public class Main {
      */
         Scanner sc = new Scanner(System.in);
 
-        LocalDate localDate = LocalDate.now();
-        System.out.print("\n Initial date format: " + localDate);
+        //Solution 1
+        System.out.print("\n Insert a date (2017-07-28): ");
+        String date = sc.nextLine();
 
-        String date = localDate.format(DateTimeFormatter.ofPattern("dd/MM/yy")); // V
+        String[] str = date.split("-");
 
-       // System.out.println(Arrays.toString(localDate.toString().split("-", 2))); X
-        System.out.println("\n Date string formatted: " + date);// V
+        for (String temp : str) {
 
-        //System.out.println(String.valueOf(date.replace("-","/"))); X
+            temp = str[1] + "/" + str[2] + "/" + str[0];
+            date = temp;
+
+        }
+        System.out.println("\n New format: "+date);
+
+        //Solution 2 best practice
+//        LocalDate localDate = LocalDate.now();
+//
+//        System.out.print("\n Initial date format: " + localDate);
+//
+//        String date = localDate.format(DateTimeFormatter.ofPattern("dd/MM/yy"));
+//
+//        System.out.println("\n Date string formatted: " + date);
 
     }
 }
