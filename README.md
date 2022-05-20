@@ -2,7 +2,7 @@
  **[![](img/cover.jpg)](https://tekwill.md/tekwill-academy/)**
 
 
-## 📌Description 
+## 📌Description
 
 #### According to Oracle, Java is one of the most widely used programming languages ​​globally and runs on 3 billion mobile phones, 1 billion computers and 45 billion virtual machines. These numbers are the result of just 8 million Java developers globally innovating around the world every day.
 
@@ -21,15 +21,19 @@ ________________________________________________________________________________
 >- **🔥[Lesson 2](Lesson_2)**
 >
 >- **🔥[Lesson 3](Lesson_3)**
-> 
+>
 >- **🔥[Lesson 4](Lesson_4)**
 >
 >- **🔥[Lesson 5](Lesson_5)**
 >
 >- **🔥[Lesson 6](Lesson_6)**
-> 
+>
+>- **🔥[Lesson 7](Lesson_7)**
+>
+>- **🔥[Lesson 8](Lesson_8)**
+>
 >- **🔥[Games](Games)**
-> 
+>
 
 ## 📌Installation
 
@@ -37,4 +41,3 @@ ________________________________________________________________________________
 $ git clone https://github.com/serbug/Tekwill.git
 $ git checkout -b some-branch
 ````
-
