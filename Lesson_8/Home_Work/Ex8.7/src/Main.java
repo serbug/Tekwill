@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,25 +16,18 @@ public class Main {
                  can use any algorithm for sorting it.*/
     public static void sort(int[] numbers) {
 
-        int temp;
-        for (int i = 0; i < numbers.length-1; i++) {
-            if (numbers[i] > numbers[i+1]) {
-                temp=numbers[i];
-                numbers[i] = numbers[i+1];
-                numbers[i+1]=temp;
-            }
-        }
-        System.out.println(Arrays.toString(numbers));
+       Arrays.sort(numbers);
 
     }
     /* Do not change code below */
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
         String[] values = scanner.nextLine().split("\\s+");
-        int[] numbers = Arrays.stream(values)
-                .mapToInt(Integer::parseInt)
-                .toArray();
+        System.out.println(Arrays.toString(values));
+        int[] numbers = Arrays.stream(values).mapToInt(Integer::parseInt).toArray();
+        //System.out.println(numbers);
         sort(numbers);
+        System.out.println(Arrays.toString(numbers));
         Arrays.stream(numbers).forEach(e -> System.out.print(e + " "));
     }
 }
