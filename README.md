@@ -16,27 +16,27 @@ ________________________________________________________________________________
 >
 >- **🔥[Lesson Teacher Version](https://github.com/UmanetAlexandru/Tekwill2022)**
 >
->- **🔥[Lesson 1](Lesson 1)**
+>- **🔥[Lesson 1](Lesson%201)**
 >
->- **🔥[Lesson 2](Lesson 2)**
+>- **🔥[Lesson 2](Lesson%202)**
 >
->- **🔥[Lesson 3](Lesson 3)**
+>- **🔥[Lesson 3](Lesson%203)**
 >
->- **🔥[Lesson 4](Lesson 4)**
+>- **🔥[Lesson 4](Lesson%204)**
 >
->- **🔥[Lesson 5](Lesson 5)**
+>- **🔥[Lesson 5](Lesson%205)**
 >
->- **🔥[Lesson 6](Lesson 6)**
+>- **🔥[Lesson 6](Lesson%206)**
 >
->- **🔥[Lesson 7](Lesson 7)**
+>- **🔥[Lesson 7](Lesson%207)**
 >
->- **🔥[Lesson 8](Lesson 8)**
+>- **🔥[Lesson 8](Lesson%208)**
 >
->- **🔥[Lesson 9](Lesson 9)**
+>- **🔥[Lesson 9](Lesson%209)**
 >
->- **🔥[Lesson 10](Lesson 10)**
+>- **🔥[Lesson 10](Lesson%2010)**
 >
->- **🔥[Lesson 11](Lesson 11)**
+>- **🔥[Lesson 11](Lesson%2011)**
 >
 >- **🔥[Games](Games)**
 >
@@ -47,3 +47,4 @@ ________________________________________________________________________________
 $ git clone https://github.com/serbug/Tekwill.git
 $ git checkout -b some-branch
 ````
+-----------------------------------------------------------------------------
