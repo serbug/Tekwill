@@ -1,8 +1,10 @@
 public class Primitive {
+
     public static boolean toPrimitive(Boolean b) {
-        if(!b){
-            return b;
+        //NullPointerException control
+        if (b == null) {
+            return false;
         }
-       return true;
+        return b;
     }
 }
