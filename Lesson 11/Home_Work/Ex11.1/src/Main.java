@@ -13,6 +13,6 @@ return a boolean. If the passed value is null, the result should be false.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(Primitive.toPrimitive(null));
+        System.out.println(Primitive.toPrimitive(true));
     }
 }
