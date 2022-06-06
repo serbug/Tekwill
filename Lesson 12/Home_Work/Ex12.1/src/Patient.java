@@ -1,2 +1,2 @@
-public class Patient extends Doctor{
+public class Patient extends Person{
 }

@@ -10,7 +10,7 @@ The root of the hierarchy is the Person class. It represents all employees and
 patients of the Hospital. Doctors are kind of employees.*/
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person();
+
         
     }
 }
