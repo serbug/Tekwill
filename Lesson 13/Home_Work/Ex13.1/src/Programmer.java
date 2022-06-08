@@ -1,16 +1,16 @@
-public class Programmer extends TeamLead {
+public class Programmer {
 
     private int numProgrammer;
 
 
     public Programmer(int numProgrammer) {
-        super(numProgrammer);
+
         this.numProgrammer = numProgrammer;
         employ();
     }
 
-    @Override
-    protected void employ() {
+
+    private void employ() {
         System.out.println(numProgrammer + " programmer");
     }
 

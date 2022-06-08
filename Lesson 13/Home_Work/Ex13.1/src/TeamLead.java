@@ -1,8 +1,9 @@
-public class TeamLead{
+public class TeamLead extends Programmer{
 
-    private int numTeamLead;
+    private int numTeamLead;//1
 
     public TeamLead(int numTeamLead) {
+        super(numTeamLead);
         this.numTeamLead = numTeamLead;
         employ();
     }
