@@ -9,13 +9,8 @@ public class Newspaper extends Publication {
     }
 
     @Override
-    public String getType() {
-        return "Newspaper";
-    }
-
-    @Override
     public String getDetails() {
-        return "source - " + source;
+        return "(source - " + source+")";
     }
 
 }

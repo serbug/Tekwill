@@ -6,15 +6,15 @@ public class Publication {
     }
 
     public final String getInfo() {
-        return getType() + "(" + getDetails() + "):" + title;
+        return getType() + getDetails() + ":" + title;
     }
 
     public String getType() {
-        return "Publication";
+        return getClass().getSimpleName();
     }
 
     public String getDetails() {
-        return title;
+        return "";
     }
 
 }

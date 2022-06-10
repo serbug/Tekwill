@@ -7,12 +7,7 @@ public class Article extends Publication {
     }
 
     @Override
-    public String getType() {
-        return "Article";
-    }
-
-    @Override
     public String getDetails() {
-        return "author - " + author;
+        return "(author - " + author+")";
     }
 }

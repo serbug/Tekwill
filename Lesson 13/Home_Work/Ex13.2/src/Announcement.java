@@ -7,12 +7,7 @@ public class Announcement extends Publication {
     }
 
     @Override
-    public String getType() {
-        return "Announcement";
-    }
-
-    @Override
     public String getDetails() {
-        return "days to expire - " + daysToExpire;
+        return "(days to expire - " + daysToExpire+")";
     }
 }
