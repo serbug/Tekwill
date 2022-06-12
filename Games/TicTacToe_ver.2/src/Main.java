@@ -10,7 +10,7 @@ public class Main {
        // String NAME_OF_FILE="/doc/Tic Tac Toe.pdf";
         System.out.println("View conditions");
 
-       // printPDF(); // Test method
+       printPDF(); // Test method
 
         System.out.println("Stage 1 / 5 \n");
         Stage1.printBoard();
@@ -27,7 +27,7 @@ public class Main {
 
     public static void printPDF() throws IOException {
         //Loading an existing document
-        File file = new File("../Games/doc/Tic Tac Toe.pdf");
+        File file = new File("resource/doc/Tic Tac Toe.pdf");
         PDDocument document = PDDocument.load(file);
         //Instantiate PDFTextStripper class
         PDFTextStripper pdfStripper = new PDFTextStripper();
