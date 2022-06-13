@@ -16,23 +16,23 @@ ________________________________________________________________________________
 >
 >- **🔥[Lesson Teacher Version](https://github.com/UmanetAlexandru/Tekwill2022)**
 >
->- **🔥[Lesson 1](Lesson%201)**
+>- **🔥[Lesson 1](Lesson%2001)**
 >
->- **🔥[Lesson 2](Lesson%202)**
+>- **🔥[Lesson 2](Lesson%2002)**
 >
->- **🔥[Lesson 3](Lesson%203)**
+>- **🔥[Lesson 3](Lesson%2003)**
 >
->- **🔥[Lesson 4](Lesson%204)**
+>- **🔥[Lesson 4](Lesson%2004)**
 >
->- **🔥[Lesson 5](Lesson%205)**
+>- **🔥[Lesson 5](Lesson%2005)**
 >
->- **🔥[Lesson 6](Lesson%206)**
+>- **🔥[Lesson 6](Lesson%2006)**
 >
->- **🔥[Lesson 7](Lesson%207)**
+>- **🔥[Lesson 7](Lesson%2007)**
 >
->- **🔥[Lesson 8](Lesson%208)**
+>- **🔥[Lesson 8](Lesson%2008)**
 >
->- **🔥[Lesson 9](Lesson%209)**
+>- **🔥[Lesson 9](Lesson%2009)**
 >
 >- **🔥[Lesson 10](Lesson%2010)**
 >
