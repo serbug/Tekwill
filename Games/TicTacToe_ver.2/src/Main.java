@@ -55,6 +55,11 @@ public class Main {
                     Stage4.analyzeGameState();
                     pressAnyKey();
                 }
+                case 5 -> {
+                    System.out.println("\nStage 5 / 5 \n");
+                    Stage5.analyzeGameState();
+                    pressAnyKey();
+                }
                 case 0 -> {
                     System.out.println("\n\t\t\tExit...!!!\n");
                 }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Stage4 {
-    private static final Scanner sc = new Scanner(System.in);
+public class Stage5 {
+    private static Scanner sc = new Scanner(System.in);
 
     public static void analyzeGameState() {
 
@@ -78,7 +78,7 @@ public class Stage4 {
         for (char[] aChar : chars) {
             System.out.print("| ");
             for (char c : aChar) {
-                System.out.print(c + " ");
+                System.out.print(c + " - ");
             }
             System.out.println("|");
         }
