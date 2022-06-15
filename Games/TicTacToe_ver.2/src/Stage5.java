@@ -1,136 +1,194 @@
 import java.util.Scanner;
 
-public class Stage5 {
-    private static Scanner sc = new Scanner(System.in);
+class Stage5 {
 
-    public static void analyzeGameState() {
 
-        System.out.print("Enter cells: ");
-        String str = sc.nextLine();
-        char[][] game = toMulti(str);
+    public static void printStage6() {
+        Scanner in = new Scanner(System.in);
+        //Create a 3x3 array that represents our tic tac toe board
+        char[][] board = new char[3][3];
 
-        print(game);
+        //Initialize our board with dashes (empty positions)
 
-        getUserInput(game);
-
-        print(game);
-
-        int nrOfXs = countChar(game, 'X');
-        int nrOfOs = countChar(game, 'O');
-        boolean xHasWon = hasWon(game, 'X');
-        boolean oHasWon = hasWon(game, 'O');
-        int diff = Math.abs(nrOfXs - nrOfOs);
-
-        if (diff > 1 || (xHasWon && oHasWon)) {
-            System.out.println("Impossible");
-        } else if (xHasWon) {
-            System.out.println("X wins");
-        } else if (oHasWon) {
-            System.out.println("O wins");
-        } else if (!str.contains("_")) {
-            System.out.println("Draw");
-        } else {
-            System.out.println("Game not finished");
-        }
-    }
-
-    public static boolean hasWon(char[][] multi, char ch) {
-        return checkColumns(multi, ch) || checkRows(multi, ch) || checkDiagonals(multi, ch);
-    }
-
-    public static boolean checkRows(char[][] multi, char ch) {
-        for (char[] chars : multi) {
-            if (chars[0] == ch && chars[1] == ch && chars[2] == ch) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean checkColumns(char[][] multi, char ch) {
         for (int i = 0; i < 3; i++) {
-            if (multi[0][i] == ch && multi[1][i] == ch && multi[2][i] == ch) {
-                return true;
+            for (int j = 0; j < 3; j++) {
+                board[i][j] = '-';
             }
         }
-        return false;
+
+        //Create a Scanner and ask the players for their names
+
+        System.out.println("Let's play Tic Tac Toe!");
+        System.out.print("Player 1, what is your name? ");
+        String p1 = in.nextLine();
+        System.out.print("Player 2, what is your name? ");
+        String p2 = in.nextLine();
+
+        //Create a player1 boolean that is true if it is player 1's turn and false if it is player 2's turn
+        boolean player1 = true;
+
+        //Create a gameEnded boolean and use it as the condition in the while loop
+        boolean gameEnded = false;
+        while (!gameEnded) {
+
+            //Draw the board
+            drawBoard(board);
+
+            //Print whose turn it is
+            if (player1) {
+                System.out.println(p1 + "'s Turn (x):");
+            } else {
+                System.out.println(p2 + "'s Turn (o):");
+            }
+
+            //Create a char variable that stores either 'x' or 'o' based on what player's turn it is
+            char c = '-';
+            if (player1) {
+                c = 'X';
+            } else {
+                c = 'O';
+            }
+
+            //Create row and col variables which represent indexes that correspond to a position on our board
+            int row = 0;
+            int col = 0;
+
+            //Only break out of the while loop once the user enters a valid position
+            while (true) {
+
+                //Ask the user for what position they want to place their x or o
+                System.out.print("Enter a row number (0, 1, or 2): ");
+                row = isNumeric();
+
+                //  row = in.nextInt();
+
+                System.out.print("Enter a column number (0, 1, or 2): ");
+                col = isNumeric();
+                //col = in.nextInt();
+
+
+                //Check if the row and col are 0, 1, or 2
+                if (row < 0 || col < 0 || row > 2 || col > 2) {
+                    System.out.println("Coordinates should be from 1 to 3!");
+
+                    //Check if the position on the board the user entered is empty (has a -) or not
+                } else if (board[row][col] != '-') {
+                    System.out.println("This cell is occupied!");
+
+                } else {
+                    break;
+                }
+
+            }
+
+            //Set the position on the board at row, col to c
+            board[row][col] = c;
+
+            //Check to see if either player has won
+            if (playerHasWon(board) == 'X') {
+                System.out.println(p1 + " has won!");
+                gameEnded = true;
+            } else if (playerHasWon(board) == 'O') {
+                System.out.println(p2 + " has won!");
+                gameEnded = true;
+            } else {
+
+                //If neither player has won, check to see if there has been a tie (if the board is full)
+                if (boardIsFull(board)) {
+                    System.out.println("It's a tie!");
+                    gameEnded = true;
+                } else {
+                    //If player1 is true, make it false, and vice versa; this way, the players alternate each turn
+                    player1 = !player1;
+                }
+
+            }
+
+        }
+
+        //Draw the board at the end of the game
+        drawBoard(board);
+
     }
 
-    public static boolean checkDiagonals(char[][] multi, char ch) {
-        return multi[0][0] == ch && multi[1][1] == ch && multi[2][2] == ch ||
-                multi[0][2] == ch && multi[1][1] == ch && multi[2][0] == ch;
+    //Make a function to draw the tic tac toe board
+    public static void drawBoard(char[][] board) {
+        System.out.println("\n\t\t  Board:");
+        System.out.println("\t\t---------");
+        for (int i = 0; i < 3; i++) {
+            //The inner for loop prints out each row of the board
+            System.out.print("\t\t| ");
+            for (int j = 0; j < 3; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.print("|");
+            //This print statement makes a new line so that each row is on a separate line
+            System.out.println();
+        }
+        System.out.println("\t\t---------\n");
     }
 
-    public static int countChar(char[][] multi, char ch) {
-        int count = 0;
-        for (char[] arr : multi) {
-            for (char aChar : arr) {
-                if (aChar == ch) {
-                    count++;
+    //Make a function to see if someone has won and return the winning char
+    public static char playerHasWon(char[][] board) {
+
+        //Check each row
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != '-') {
+                return board[i][0];
+            }
+        }
+
+        //Check each column
+        for (int j = 0; j < 3; j++) {
+            if (board[0][j] == board[1][j] && board[1][j] == board[2][j] && board[0][j] != '-') {
+                return board[0][j];
+            }
+        }
+
+        //Check the diagonals
+        if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != '-') {
+            return board[0][0];
+        }
+        if (board[2][0] == board[1][1] && board[1][1] == board[0][2] && board[2][0] != '-') {
+            return board[2][0];
+        }
+
+        //Otherwise nobody has not won yet
+        return ' ';
+
+    }
+
+    //Make a function to check if all of the positions on the board have been filled
+    public static boolean boardIsFull(char[][] board) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == '-') {
+                    return false;
                 }
             }
         }
-        return count;
+        return true;
     }
 
-    private static void print(char[][] chars) {
-        System.out.println("---------");
-        for (char[] aChar : chars) {
-            System.out.print("| ");
-            for (char c : aChar) {
-                System.out.print(c + " - ");
+    private static int isNumeric() {
+        Scanner sc = new Scanner(System.in);
+        int num = 4;
+        boolean check = false;
+
+        while (!check) {
+
+            String temp = sc.next();
+            try {
+                num = Integer.parseInt(temp);
+
+                check = true;
+            } catch (NumberFormatException e) {
+                System.out.print("\nYou should input numbers!\nTry again: ");
+
+
             }
-            System.out.println("|");
+
         }
-        System.out.println("---------");
+        return num;
     }
-
-
-    private static char[][] toMulti(String input) {
-        return new char[][]{
-                {input.charAt(0), input.charAt(1), input.charAt(2)},
-                {input.charAt(3), input.charAt(4), input.charAt(5)},
-                {input.charAt(6), input.charAt(7), input.charAt(8)}
-        };
-    }
-
-    private static void getUserInput(char[][] game) {
-        while (true) {
-            System.out.print("Enter the coordinates: ");
-            String input = sc.nextLine();//31 31
-            String[] in = input.split(" ");//["31", "31"]
-
-            if (in.length != 2) {
-                System.out.println("You should input numbers!");
-                continue;
-            }
-
-            if (!isNumeric(in[0]) || !isNumeric(in[1])) {
-                System.out.println("You should input numbers!");
-                continue;
-            }
-
-            int i1 = Integer.parseInt(in[0]) - 1;
-            int i2 = Integer.parseInt(in[1]) - 1;
-
-            if (i1 < 0 || i1 > 2 || i2 < 0 || i2 > 2) {
-                System.out.println("Coordinates should be from 1 to 3!");
-                continue;
-            }
-
-            if (game[i1][i2] != '_') {
-                System.out.println("This cell is occupied!");
-                continue;
-            }
-
-            game[i1][i2] = 'X';
-            break;
-        }
-
-    }
-
-    private static boolean isNumeric(String str) {
-        return str.matches("-?\\d+(\\.\\d+)?");
-    }
-
 }

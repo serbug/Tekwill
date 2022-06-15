@@ -27,7 +27,7 @@ public class Main {
         System.out.println("#        5 - Stage 5 / 5           #          0 - Exit            #");
         System.out.println("###################################################################");
 
-        int n = 9;
+        int n = 7;
 
         while (n != 0) {
             //  clearConsole();
@@ -57,7 +57,7 @@ public class Main {
                 }
                 case 5 -> {
                     System.out.println("\nStage 5 / 5 \n");
-                    Stage5.analyzeGameState();
+                    Stage5.printStage6();
                     pressAnyKey();
                 }
                 case 0 -> {
@@ -81,9 +81,9 @@ public class Main {
         while (!check.equals("yes") && !check.equals("no")) {
 
             System.out.print("Option: ");
-            check = sc.next();
+            check = sc.next().toLowerCase().trim();
 
-            switch (check.toLowerCase().trim()) {
+            switch (check) {
                 case "yes" -> {
                     printPDF();
                     pressAnyKey();
