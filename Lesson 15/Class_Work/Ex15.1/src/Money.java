@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Money {
-    int amount;
-    String currencyCode;
+    private int amount;
+    private String currencyCode;
 
     public Money(int amount, String currencyCode) {
         this.amount = amount;
@@ -28,8 +28,7 @@ public class Money {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Money)) return false;
-        Money money = (Money) o;
+        if (!(o instanceof Money money)) return false;
         return getAmount() == money.getAmount() && getCurrencyCode().equals(money.getCurrencyCode());
     }
 
